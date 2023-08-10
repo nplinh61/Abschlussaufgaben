@@ -8,12 +8,22 @@ import edu.kit.kastel.ui.ProcastinotCommand;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.Optional;
 
+/**
+ * Command to ask a task.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class AddCommand extends ProcastinotCommand {
 
+    private static final String WRONG_PRIORITY_MESSAGE = createError("Wrong Priority. Please check again.");
+    private static final String INVALID_INPUT_MESSAGE = createError("Invalid input. Please check again.");
+    private static final String INVALID_OPTIONAL_INPUT = createError("Optional input is wrong. Please check again.");
     private static final String COMMAND_NAME = "add";
+    private static final String ADD_TASK_SUCCESS_FORMAT = "added %d: %s%n";
+
     private static final int EXPECTED_ARGUMENT_LENGTH = 1;
     private static final int NUMBER_OPTIONAL_ARGUMENTS = 2;
 
@@ -34,15 +44,12 @@ public class AddCommand extends ProcastinotCommand {
     @Override
     protected void executeProcastinotCommand(String[] commandArguments) {
         if (commandArguments.length < 1) {
-            System.out.println("Invalid command format. Usage: add <name> [priority] [date]");
+            System.out.println(INVALID_INPUT_MESSAGE);
             return;
         }
-
         String taskName = commandArguments[NAME_INDEX];
-
         LocalDate date = null;
         Priority priority = Priority.NONE;
-
         if (commandArguments.length == 2) {
             boolean parsed = false;
             String nextArgument = commandArguments[FIRST_OPTIONAL_ARGUMENT_INDEX];
@@ -51,7 +58,6 @@ public class AddCommand extends ProcastinotCommand {
                 priority = parsedPriority.get();
                 parsed = true;
             }
-
             if (!parsed) {
                 Optional<LocalDate> parsedDate = tryParsingDate(nextArgument);
                 if (parsedDate.isPresent()) {
@@ -59,74 +65,57 @@ public class AddCommand extends ProcastinotCommand {
                     parsed = true;
                 }
             }
-
             if (!parsed) {
-                System.err.println("Second argument is neither date nor priority");
+                System.err.println(INVALID_OPTIONAL_INPUT);
                 return;
             }
         }
-
         if (commandArguments.length == 3) {
             String priorityString = commandArguments[FIRST_OPTIONAL_ARGUMENT_INDEX];
             String dateString = commandArguments[SECOND_OPTIONAL_ARGUMENT_INDEX];
-
             Optional<Priority> parsedPriority = tryParsingPriority(priorityString);
             if (parsedPriority.isPresent()) {
                 priority = parsedPriority.get();
-            }
-            else {
-                System.err.println("Wrong Priority");
+            } else {
+                System.err.println(WRONG_PRIORITY_MESSAGE);
                 return;
             }
-
             Optional<LocalDate> parsedDate = tryParsingDate(dateString);
             if (parsedDate.isPresent()) {
                 date = parsedDate.get();
-            }
-            else {
+            } else {
                 System.err.println(INVALID_DATE_TIME_ERROR);
                 return;
             }
         }
-
-        // Here, you can create a new task and add it to your task management system
-        // Replace this with the actual logic to create and add the
-
         Task newTask = new Task(taskName, priority);
         if (date != null) {
             newTask.setDueDate(date);
         }
-
-        // Assuming you have a method to add a task and get its ID from your command handler
         int taskId = procastinot.addTask(newTask);
-
-        System.out.println("added " + taskId + ": " + taskName);
+        System.out.printf(ADD_TASK_SUCCESS_FORMAT, taskId, taskName);
     }
 
     private static Optional<LocalDate> tryParsingDate(String dateString) {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(DATE_REGEX);
         try {
-            LocalDate date;
-            date = LocalDate.parse(dateString, dateFormatter);
+            LocalDate date = LocalDate.parse(dateString, dateFormatter);
             return Optional.of(date);
-        }
-        catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             return Optional.empty();
         }
     }
 
     private static Optional<Priority> tryParsingPriority(String priorityString) {
         try {
-            Priority priority;
-            priority = parsePriority(priorityString);
+            Priority priority = parsePriority(priorityString);
             return Optional.of(priority);
-        }
-        catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             return Optional.empty();
         }
     }
 
     private static Priority parsePriority(String input) {
-            return Priority.valueOf(input.toUpperCase());
-    }
+        return Priority.valueOf(input.toUpperCase()); }
+
 }

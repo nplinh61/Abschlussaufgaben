@@ -5,42 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AA1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/CommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/ProcastinotCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/QuitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddListCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AssignListCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AssignTaskCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/BeforeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/BetweenCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangePriorityCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/DeleteCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/DuplicatesCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/FindCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ListCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/RestoreCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ShowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TagListCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TagTaskCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TaggedWithCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ToDoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ToggleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/UpComingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddListCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,16 +39,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Linh Nguyen Phuong/IdeaProjects/programming23/programming23/programming23/AA1",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Linh Nguyen Phuong/Programmieren Checkstyle/Proggen_Inspections_All.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "Errors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691077988592</updated>
       <workItem from="1691077989789" duration="4000" />
-      <workItem from="1691601288575" duration="9321000" />
+      <workItem from="1691601288575" duration="15059000" />
     </task>
     <servers />
   </component>

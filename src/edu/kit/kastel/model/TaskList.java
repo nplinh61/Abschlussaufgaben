@@ -3,7 +3,7 @@ package edu.kit.kastel.model;
 import java.util.ArrayList;
 import java.util.List;
 
-class TaskList {
+public class TaskList {
     private String name;
     private List<Task> tasks;
     private List<String> tags;
