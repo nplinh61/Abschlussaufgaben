@@ -4,8 +4,11 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to
+ */
 public class TagListCommand extends Command {
-    private static final String COMMAND_NAME = "tag";
+    private static final String COMMAND_NAME = "tagg";
 
     /**
      * Instantiates a new command.

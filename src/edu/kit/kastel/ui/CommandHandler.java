@@ -5,15 +5,39 @@
 package edu.kit.kastel.ui;
 
 import edu.kit.kastel.model.Procastinot;
-import edu.kit.kastel.ui.commands.*;
+import edu.kit.kastel.ui.commands.AddCommand;
+import edu.kit.kastel.ui.commands.AddListCommand;
+import edu.kit.kastel.ui.commands.AssignTaskCommand;
+import edu.kit.kastel.ui.commands.AssignListCommand;
+import edu.kit.kastel.ui.commands.BeforeCommand;
+import edu.kit.kastel.ui.commands.BetweenCommand;
+import edu.kit.kastel.ui.commands.ChangeDateCommand;
+import edu.kit.kastel.ui.commands.ChangePriorityCommand;
+import edu.kit.kastel.ui.commands.DuplicatesCommand;
+import edu.kit.kastel.ui.commands.DeleteCommand;
+import edu.kit.kastel.ui.commands.FindCommand;
+import edu.kit.kastel.ui.commands.ListCommand;
+import edu.kit.kastel.ui.commands.RestoreCommand;
+import edu.kit.kastel.ui.commands.ShowCommand;
+import edu.kit.kastel.ui.commands.TagListCommand;
+import edu.kit.kastel.ui.commands.TaggedWithCommand;
+import edu.kit.kastel.ui.commands.ToDoCommand;
+import edu.kit.kastel.ui.commands.TagCommand;
+import edu.kit.kastel.ui.commands.ToggleCommand;
+import edu.kit.kastel.ui.commands.UpComingCommand;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Scanner;
+import java.util.Arrays;
 
 
 /**
  * This class handles the user input and executes the commands.
  *
  * @author Programmieren-Team
+ * @version 1.0
  */
 public final class CommandHandler {
     private static final String COMMAND_SEPARATOR_REGEX = "\\s+";
@@ -84,7 +108,7 @@ public final class CommandHandler {
         this.addCommand(new DuplicatesCommand(this, procastinot));
         this.addCommand(new ShowCommand(this, procastinot));
         this.addCommand(new TaggedWithCommand(this, procastinot));
-        this.addCommand(new TagListCommand(this, procastinot));
+        this.addCommand(new TagCommand(this, procastinot));
         this.addCommand(new TagListCommand(this, procastinot));
         this.addCommand(new ToDoCommand(this, procastinot));
         this.addCommand(new ToggleCommand(this, procastinot));

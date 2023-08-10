@@ -14,12 +14,21 @@ public class TaskList {
         this.tags = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void addTask(Task task) {
         tasks.add(task);
     }
 
-    public void addTag(String tag) {
-        tags.add(tag);
+    public boolean addTag(String tag) {
+        if (!tags.contains(tag)) {
+            tags.add(tag);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

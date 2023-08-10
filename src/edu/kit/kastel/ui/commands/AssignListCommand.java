@@ -5,8 +5,14 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to assign a list
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class AssignListCommand extends Command {
-    private static final String COMMAND_NAME = "assign";
+    private static final String LIST_COMMAND_NAME = "assign";
 
     /**
      * Instantiates a new command.
@@ -15,7 +21,7 @@ public class AssignListCommand extends Command {
      * @param procastinot the procastinot application
      */
     public AssignListCommand(CommandHandler commandHandler, Procastinot procastinot) {
-        super(COMMAND_NAME, commandHandler);
+        super(LIST_COMMAND_NAME, commandHandler);
     }
 
     @Override

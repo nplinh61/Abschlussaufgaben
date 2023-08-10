@@ -104,7 +104,7 @@ import java.util.Objects;
         }
 
         @Override
-        public final void execute(String[] commandArguments) {
+        public void execute(String[] commandArguments) {
             List<String> argumentsForCarSharingPlatformCommand = new ArrayList<>();
             for (String commandArgument : commandArguments) {
                 // Arguments of car sharing platform commands are separated by another deliminator.

@@ -39,7 +39,13 @@ public class Task {
         this.parentTask = null;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
 
     public void markAsCompleted() {
         this.completed = true;
@@ -61,8 +67,12 @@ public class Task {
     }
 
 
-    public void addTag(String tag) {
-        this.tags.add(tag);
+    public boolean addTag(String tag) {
+        if (!tags.contains(tag)) {
+            tags.add(tag);
+            return true;
+        }
+        return false;
     }
 
     public void addSubTask(Task subTask) {
