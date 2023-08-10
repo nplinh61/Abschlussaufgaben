@@ -92,7 +92,7 @@ public class AddCommand extends ProcastinotCommand {
         if (date != null) {
             newTask.setDueDate(date);
         }
-        int taskId = procastinot.addTask(newTask);
+        int taskId = getProcastinot().addTask(newTask);
         System.out.printf(ADD_TASK_SUCCESS_FORMAT, taskId, taskName);
     }
 

@@ -19,7 +19,6 @@ import edu.kit.kastel.ui.commands.FindCommand;
 import edu.kit.kastel.ui.commands.ListCommand;
 import edu.kit.kastel.ui.commands.RestoreCommand;
 import edu.kit.kastel.ui.commands.ShowCommand;
-import edu.kit.kastel.ui.commands.TagListCommand;
 import edu.kit.kastel.ui.commands.TaggedWithCommand;
 import edu.kit.kastel.ui.commands.ToDoCommand;
 import edu.kit.kastel.ui.commands.TagCommand;
@@ -109,7 +108,6 @@ public final class CommandHandler {
         this.addCommand(new ShowCommand(this, procastinot));
         this.addCommand(new TaggedWithCommand(this, procastinot));
         this.addCommand(new TagCommand(this, procastinot));
-        this.addCommand(new TagListCommand(this, procastinot));
         this.addCommand(new ToDoCommand(this, procastinot));
         this.addCommand(new ToggleCommand(this, procastinot));
         this.addCommand(new UpComingCommand(this, procastinot));

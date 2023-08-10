@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to show a task according to an id.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class ShowCommand extends Command {
     private static final String COMMAND_NAME = "show";
 

@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to show the tasks that have to be done before one date/deadline.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class BeforeCommand extends Command {
     private static final String COMMAND_NAME = "before";
 

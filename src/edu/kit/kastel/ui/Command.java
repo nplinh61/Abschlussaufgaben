@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * A command that can be executed by the user.
  *
- * @author Dominik Fuchß
+ * @author Programmieren-Team
  * @version 1.0
  */
 public abstract class Command {

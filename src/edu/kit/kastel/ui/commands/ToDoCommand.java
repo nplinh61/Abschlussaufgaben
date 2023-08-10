@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to show all the tasks that have not been yet done.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class ToDoCommand extends Command {
     private static final String COMMAND_NAME = "todo";
 

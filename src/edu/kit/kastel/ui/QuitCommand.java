@@ -5,7 +5,8 @@ import edu.kit.kastel.model.Procastinot;
 /**
  * Command to quit the program.
  *
- * @author Programmieren - Team
+ * @author Programmieren-Team
+ * @version 1.0
  */
 final class QuitCommand extends Command {
 
@@ -18,7 +19,7 @@ final class QuitCommand extends Command {
      * @param commandHandler the command handler
      * @param procastinot the procastinot application
      */
-    public QuitCommand(CommandHandler commandHandler, Procastinot procastinot) {
+    QuitCommand(CommandHandler commandHandler, Procastinot procastinot) {
         super(COMMAND_NAME, commandHandler);
     }
 

@@ -4,6 +4,13 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to show all the tasks that due on the next seven days,
+ * starting from a certain date.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class UpComingCommand extends Command {
     private static final String COMMAND_NAME = "upcoming";
 

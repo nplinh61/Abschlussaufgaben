@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to find the duplicate tasks.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class DuplicatesCommand extends Command {
     private static final String COMMAND_NAME = "duplicates";
 

@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to show all the tasks that are tagged with a given tag.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class TaggedWithCommand extends Command {
     private static final String COMMAND_NAME = "tagged-with";
 

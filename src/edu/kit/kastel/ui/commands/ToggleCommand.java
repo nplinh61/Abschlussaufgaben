@@ -5,6 +5,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to mark a task with x when the task has already been done.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class ToggleCommand extends Command {
     private static final String COMMAND_NAME = "todo";
 

@@ -44,7 +44,7 @@ public class AddListCommand extends ProcastinotCommand {
         TaskList newList = new TaskList(listName);
 
         // Assuming you have a method to add a list from your command handler
-        procastinot.addList(newList);
+        getProcastinot().addList(newList);
 
         System.out.println(ADD_SUCCESS_FORMAT + listName);
 

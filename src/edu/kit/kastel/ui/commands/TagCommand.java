@@ -54,7 +54,7 @@ public class TagCommand extends ProcastinotCommand {
     }
 
     private void tagTask(int taskId, String tag) {
-        Task taggedTask = procastinot.getTaskById(taskId);
+        Task taggedTask = getProcastinot().getTaskById(taskId);
         if (taggedTask == null) {
             System.out.printf(TASK_NOT_FOUND_MESSAGE, taskId);
             return;
@@ -71,7 +71,7 @@ public class TagCommand extends ProcastinotCommand {
     }
 
     private void tagList(String listName, String tag) {
-        TaskList taggedList = procastinot.getListByName(listName);
+        TaskList taggedList = getProcastinot().getListByName(listName);
         if (taggedList == null) {
             System.out.printf(LIST_NOT_FOUND_MESSAGE, listName);
             return;

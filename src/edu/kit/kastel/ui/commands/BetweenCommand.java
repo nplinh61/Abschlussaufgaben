@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to show all the tasks that have to be done between 2 dates/deadlines.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class BetweenCommand extends Command {
     private static final String COMMAND_NAME = "between";
 

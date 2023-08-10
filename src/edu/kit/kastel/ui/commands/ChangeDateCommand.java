@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to change the date that one task has to be done.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class ChangeDateCommand extends Command {
     private static final String COMMAND_NAME = "change-date";
 

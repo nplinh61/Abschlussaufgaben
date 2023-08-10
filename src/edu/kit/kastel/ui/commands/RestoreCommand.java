@@ -4,6 +4,12 @@ import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.Command;
 import edu.kit.kastel.ui.CommandHandler;
 
+/**
+ * Command to restore a deleted command.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class RestoreCommand extends Command {
     private static final String COMMAND_NAME = "restore";
 
