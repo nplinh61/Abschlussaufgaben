@@ -1,7 +1,8 @@
 package edu.kit.kastel.model;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Task {
     public enum Priority {
@@ -101,7 +102,7 @@ public class Task {
     }
 
     public List<Task> getSubTasks() {
-        return subTasks;
+        return this.subTasks;
     }
 
     @Override

@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update checkstyle : format and required javadoc">
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AssignCommand.java" afterDir="false" />
+    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update assign and toggle command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/ProcastinotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/ProcastinotCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TagCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TagCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ToggleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ToggleCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691077988592</updated>
       <workItem from="1691077989789" duration="4000" />
-      <workItem from="1691601288575" duration="35934000" />
+      <workItem from="1691601288575" duration="38863000" />
     </task>
     <task id="LOCAL-00001" summary="Add List Command">
       <created>1691674020430</created>
@@ -93,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691707771462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update assign and toggle command">
+      <created>1691794808333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691794808333</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +103,8 @@
     <MESSAGE value="Add List Command" />
     <MESSAGE value="tag command" />
     <MESSAGE value="update checkstyle : format and required javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="update checkstyle : format and required javadoc" />
+    <MESSAGE value="update assign and toggle command" />
+    <option name="LAST_COMMIT_MESSAGE" value="update assign and toggle command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
