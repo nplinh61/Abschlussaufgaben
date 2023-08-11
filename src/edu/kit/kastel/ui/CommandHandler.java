@@ -7,8 +7,7 @@ package edu.kit.kastel.ui;
 import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.ui.commands.AddCommand;
 import edu.kit.kastel.ui.commands.AddListCommand;
-import edu.kit.kastel.ui.commands.AssignTaskCommand;
-import edu.kit.kastel.ui.commands.AssignListCommand;
+import edu.kit.kastel.ui.commands.AssignCommand;
 import edu.kit.kastel.ui.commands.BeforeCommand;
 import edu.kit.kastel.ui.commands.BetweenCommand;
 import edu.kit.kastel.ui.commands.ChangeDateCommand;
@@ -93,8 +92,7 @@ public final class CommandHandler {
     private void initCommands() {
         this.addCommand(new AddCommand(this, procastinot));
         this.addCommand(new AddListCommand(this, procastinot));
-        this.addCommand(new AssignListCommand(this, procastinot));
-        this.addCommand(new AssignTaskCommand(this, procastinot));
+        this.addCommand(new AssignCommand(this, procastinot));
         this.addCommand(new BeforeCommand(this, procastinot));
         this.addCommand(new BetweenCommand(this, procastinot));
         this.addCommand(new ChangeDateCommand(this, procastinot));

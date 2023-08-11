@@ -27,6 +27,7 @@ public abstract class ProcastinotCommand extends Command {
      * Regex describing the time format HH:mm prohibiting minutes which are not 00 or 30
      */
     protected static final String TIME_REGEX = "([01][0-9]|2[0-3]):[03]0";
+    protected static final String NUMBER_REGEX = "-?\\d+";
     /**
      * Pattern for the date format
      */
@@ -42,7 +43,7 @@ public abstract class ProcastinotCommand extends Command {
 
     private static final String EXPECTED_INNER_ARGUMENTS_ERROR_FORMAT = createError("Expected %d arguments but got %d%n");
 
-    private static final String CAR_SHARING_PLATFORM_COMMAND_SEPARATOR = ";";
+    private static final String PROCASTINOT_PLATFORM_COMMAND_SEPARATOR = ";";
     private static final String ERROR_PREFIX = "ERROR: ";
     /**
      * Formatter used for parsing the expected date time format
@@ -50,32 +51,6 @@ public abstract class ProcastinotCommand extends Command {
     protected static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter
             .ofPattern(DATE_TIME_PATTERN_FFORMAT.formatted(DATE_PATTERN, TIME_PATTERN));
 
-    /**
-     * Error message if the car number does not correspond to a car
-     */
-    protected static final String CAR_NOT_FOUND_ERROR = createError("Cannot find car with given car number.");
-    /**
-     * Error message if the car number is invalid
-     */
-    protected static final String CAR_NUMBER_INVALID = createError("Car number is invalid.");
-    /**
-     * Error message if the station number does not correspond to a station
-     */
-    protected static final String STATION_NOT_FOUND_ERROR_FORMAT
-            = createError("No station with given number '%s' found.%n");
-    /**
-     * Error message if the duration is invalid
-     */
-    protected static final String INVALID_DURATION_ERROR = createError("Duration must be at least 1 hour.");
-
-    /**
-     * Error message if the date or time is invalid
-     */
-    protected static final String INVALID_DATE_TIME_ERROR = createError("Given date or time is invalid.");
-    /**
-     * Basic error message if arguments are invalid
-     */
-    protected static final String INVALID_ARGUMENTS_ERROR = createError("Given arguments are invalid.");
 
     private final int expectedNumberOfArguments;
     private final int numberOfOptionalArguments;
@@ -119,7 +94,7 @@ public abstract class ProcastinotCommand extends Command {
             // Arguments of car sharing platform commands are separated by another deliminator.
             // Therefore, we have to split them again and create a new argument list.
             argumentsForProcastinotCommand
-                    .addAll(Arrays.asList(commandArgument.split(CAR_SHARING_PLATFORM_COMMAND_SEPARATOR)));
+                    .addAll(Arrays.asList(commandArgument.split(PROCASTINOT_PLATFORM_COMMAND_SEPARATOR)));
         }
         int numberOfArguments = argumentsForProcastinotCommand.size();
         if (numberOfArguments < expectedNumberOfArguments || numberOfArguments > expectedNumberOfArguments + numberOfOptionalArguments) {
@@ -152,6 +127,10 @@ public abstract class ProcastinotCommand extends Command {
      */
     public Procastinot getProcastinot() {
         return procastinot;
+    }
+
+    public boolean isValidNumber (String str) {
+        return str.matches(NUMBER_REGEX);
     }
 }
 

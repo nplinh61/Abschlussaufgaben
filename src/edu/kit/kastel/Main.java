@@ -20,8 +20,8 @@ public final class Main {
      * @param args ignored
      */
     public static void main(String[] args) {
-        Procastinot carSharingPlatform = new Procastinot();
-        CommandHandler commandHandler = new CommandHandler(carSharingPlatform);
+        Procastinot procastinot = new Procastinot();
+        CommandHandler commandHandler = new CommandHandler(procastinot);
         commandHandler.handleUserInput();
     }
 }

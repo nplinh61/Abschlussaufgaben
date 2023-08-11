@@ -30,6 +30,7 @@ public class AddCommand extends ProcastinotCommand {
     private static final int FIRST_OPTIONAL_ARGUMENT_INDEX = 1;
     private static final int SECOND_OPTIONAL_ARGUMENT_INDEX = 2;
     private static final int NAME_INDEX = 0;
+    private static final String INVALID_DATE_TIME_ERROR = createError("Invalid date time.");
 
     /**
      * Instantiates a new command.

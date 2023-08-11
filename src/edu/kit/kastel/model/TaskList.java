@@ -31,6 +31,20 @@ public class TaskList {
         }
     }
 
+    public boolean containTask (Task task) {
+        return tasks.contains(task);
+    }
+
+    public void addAllSubTasks (Task task) {
+        //TODO: formulieren comments
+        // recursively add all the subtasks of the given task.
+        // subsubtasks will also be added.
+        for (Task subTask : task.getSubTasks()) {
+            addTask(subTask);
+            addAllSubTasks(subTask);
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

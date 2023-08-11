@@ -16,7 +16,7 @@ public class TagCommand extends ProcastinotCommand {
     private static final String COMMAND_NAME = "tag";
     private static final String INPUT_ERROR_MESSAGE = createError("Number of arguments is invalid. Please check again.");
     private static final String LIST_NOT_FOUND_MESSAGE = createError("List with name %s not found.");
-    private static final String TAG_SUCCESS_MESSAGE = "tagged %s with %s";
+    private static final String TAG_SUCCESS_MESSAGE = "tagged %s with %s%n";
     private static final String TASK_NOT_FOUND_MESSAGE = createError("Task with id %s not found.");
     private static final String TAG_ALREADY_EXISTED_MESSAGE = createError("Tag %s already existed.");
     private static final int EXPECTED_ARGUMENT_LENGTH = 2;
@@ -62,11 +62,12 @@ public class TagCommand extends ProcastinotCommand {
 
         boolean canAddTagToTask = taggedTask.addTag(tag);
         if (canAddTagToTask) {
-            System.out.printf(TAG_SUCCESS_MESSAGE, taskId, tag);
+            System.out.printf(TAG_SUCCESS_MESSAGE, taggedTask.getName(), tag);
         } else {
             System.out.printf(TAG_ALREADY_EXISTED_MESSAGE, tag);
 
         }
+
 
     }
 
@@ -82,6 +83,7 @@ public class TagCommand extends ProcastinotCommand {
         } else {
             System.out.printf(TAG_ALREADY_EXISTED_MESSAGE, tag);
         }
+
     }
 
 }

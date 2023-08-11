@@ -66,6 +66,13 @@ public class Task {
         this.priority = priority;
     }
 
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
 
     public boolean addTag(String tag) {
         if (!tags.contains(tag)) {
@@ -83,6 +90,18 @@ public class Task {
     public void removeSubTask(Task subTask) {
         subTask.parentTask = null;
         this.subTasks.remove(subTask);
+    }
+
+    public Task getParentTask() {
+        return parentTask;
+    }
+
+    public void setParentTask(Task parentTask) {
+        this.parentTask = parentTask;
+    }
+
+    public List<Task> getSubTasks() {
+        return subTasks;
     }
 
     @Override
