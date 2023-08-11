@@ -7,7 +7,6 @@ import edu.kit.kastel.ui.CommandHandler;
 import edu.kit.kastel.ui.ProcastinotCommand;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 /**
@@ -97,26 +96,5 @@ public class AddCommand extends ProcastinotCommand {
         System.out.printf(ADD_TASK_SUCCESS_FORMAT, taskId, taskName);
     }
 
-    private static Optional<LocalDate> tryParsingDate(String dateString) {
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(DATE_REGEX);
-        try {
-            LocalDate date = LocalDate.parse(dateString, dateFormatter);
-            return Optional.of(date);
-        } catch (IllegalArgumentException e) {
-            return Optional.empty();
-        }
-    }
-
-    private static Optional<Priority> tryParsingPriority(String priorityString) {
-        try {
-            Priority priority = parsePriority(priorityString);
-            return Optional.of(priority);
-        } catch (IllegalArgumentException e) {
-            return Optional.empty();
-        }
-    }
-
-    private static Priority parsePriority(String input) {
-        return Priority.valueOf(input.toUpperCase()); }
 
 }

@@ -19,7 +19,7 @@ public class AssignCommand extends ProcastinotCommand {
     private static final int NUMBER_OPTIONAL_ARGUMENTS = 0;
     private static final String INPUT_ERROR_MESSAGE = createError("Number of arguments is invalid.");
     private static final String INVALID_LIST_ERROR = createError("List does not exist. Please check again.");
-    private static final String INVALID_TASK_ERROR = createError("Task does not exist. Please check again.");
+    private static final String INVALID_TASK_ERROR = "Task with id %s does not exist. Please check again. %n";
     private static final String EXISTED_TASK_IN_LIST_MESSAGE = " Task %s already existed in list %s";
     private static final String ASSIGN_SUCCESS_MESSAGE = "assigned %s to %s%n";
 
@@ -60,8 +60,8 @@ public class AssignCommand extends ProcastinotCommand {
         Task parentTask = getProcastinot().getTaskById(targetTaskId);
 
 
-        if (subTask == null || parentTask == null) {
-            System.err.print(INVALID_TASK_ERROR);
+        if (subTask == null || parentTask == null || parentTask.isDeleted()) {
+            System.out.printf(INVALID_TASK_ERROR, targetTaskId);
             return;
         }
 

@@ -1,7 +1,8 @@
 package edu.kit.kastel.model;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Task {
     public enum Priority {
@@ -10,11 +11,13 @@ public class Task {
     private int id;
     private final String name;
     private boolean completed;
+    private boolean deleted;
     private LocalDate dueDate;
     private Priority priority;
     private final List<String> tags;
     private final List<Task> subTasks;
     private Task parentTask;
+    private TaskList parentList;
 
     public Task(String name) {
         this(name, Priority.NONE);
@@ -62,8 +65,16 @@ public class Task {
         this.dueDate = dueDate;
     }
 
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
     public void setPriority(Priority priority) {
         this.priority = priority;
+    }
+
+    public Priority getPriority() {
+        return priority;
     }
 
     public boolean isCompleted() {
@@ -72,6 +83,14 @@ public class Task {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 
     public boolean addTag(String tag) {
@@ -83,13 +102,14 @@ public class Task {
     }
 
     public void addSubTask(Task subTask) {
-        subTask.parentTask = this;
+
+        subTask.setParentTask(this);
         this.subTasks.add(subTask);
     }
 
     public void removeSubTask(Task subTask) {
-        subTask.parentTask = null;
         this.subTasks.remove(subTask);
+        subTask.setParentTask(null);
     }
 
     public Task getParentTask() {
@@ -101,7 +121,42 @@ public class Task {
     }
 
     public List<Task> getSubTasks() {
-        return subTasks;
+        return this.subTasks;
+    }
+
+    public TaskList getParentList() {
+        return parentList;
+    }
+
+    public void setParentList(TaskList parentList) {
+        this.parentList = parentList;
+    }
+
+    public int deleteOrRestoreTaskAndSubTasks(Task task, boolean delete) {
+        int numberOfSubTasks = 0;
+        if (parentTask != null) {
+            if(delete) {
+                parentTask.removeSubTask(this);
+            } else {
+                parentTask.addSubTask(task);
+            }
+
+            for (Task subtask : parentTask.getSubTasks()) {
+                numberOfSubTasks += deleteOrRestoreTaskAndSubTasks(task, delete);
+            }
+        }
+        if (task.getParentList() != null) {
+            if (delete) {
+                task.getParentList().removeTask(task);
+            } else {
+                task.getParentList().addTask(task);
+            }
+        }
+        task.setDeleted(delete);
+        numberOfSubTasks++;
+        return numberOfSubTasks;
+
+
     }
 
     @Override
@@ -112,7 +167,8 @@ public class Task {
         String priorityString = priority == Priority.NONE ? "" : priority.toString();
 
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(completionStatus).append(" ").append(name).append(tagsString).append(dueDateArrow).append(" ").append(priorityString);
+        stringBuilder.append(completionStatus).append(" ").append(name).append(tagsString).append(dueDateArrow)
+                .append(" ").append(priorityString);
 
         for (Task subTask : subTasks) {
             stringBuilder.append("\n").append(subTask.toString().replace("\n", "\n  "));

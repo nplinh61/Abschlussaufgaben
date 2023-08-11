@@ -7,12 +7,14 @@
     <option name="thirdPartyClasspath" />
     <option name="activeLocationIds">
       <option value="4a64b245-2bb0-4f59-8354-b6d9fbd890fe" />
+      <option value="88c62f60-4587-483d-8626-b45b13778b5f" />
     </option>
     <option name="locations">
       <list>
         <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
         <ConfigurationLocation id="bundled-google-checks" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
         <ConfigurationLocation id="4a64b245-2bb0-4f59-8354-b6d9fbd890fe" type="LOCAL_FILE" scope="All" description="AA1 Checkstyle">$USER_HOME$/Programmieren Checkstyle/AA1 checkstyle.xml</ConfigurationLocation>
+        <ConfigurationLocation id="88c62f60-4587-483d-8626-b45b13778b5f" type="LOCAL_FILE" scope="All" description="AA1 checkstyle update">$USER_HOME$/Programmieren Checkstyle/checkstyle (2).xml</ConfigurationLocation>
       </list>
     </option>
   </component>

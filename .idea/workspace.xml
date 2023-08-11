@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update checkstyle : format and required javadoc">
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AssignCommand.java" afterDir="false" />
+    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update assign and toggle command">
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/CommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/ProcastinotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/ProcastinotCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TagCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TagCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ToggleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ToggleCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AssignCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AssignCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangePriorityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangePriorityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/DeleteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/DeleteCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/RestoreCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/RestoreCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Linh Nguyen Phuong/Programmieren Checkstyle/Proggen_Inspections_All.xml",
+    "last_opened_file_path": "C:/Users/Linh Nguyen Phuong/Programmieren Checkstyle/checkstyle (2).xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,7 +54,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1691077988592</updated>
       <workItem from="1691077989789" duration="4000" />
-      <workItem from="1691601288575" duration="35934000" />
+      <workItem from="1691601288575" duration="39681000" />
+      <workItem from="1691925964193" duration="11658000" />
     </task>
     <task id="LOCAL-00001" summary="Add List Command">
       <created>1691674020430</created>
@@ -93,7 +96,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691707771462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update assign and toggle command">
+      <created>1691794808333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691794808333</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update assign and toggle command">
+      <created>1691797648120</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691797648120</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +120,8 @@
     <MESSAGE value="Add List Command" />
     <MESSAGE value="tag command" />
     <MESSAGE value="update checkstyle : format and required javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="update checkstyle : format and required javadoc" />
+    <MESSAGE value="update assign and toggle command" />
+    <option name="LAST_COMMIT_MESSAGE" value="update assign and toggle command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -112,6 +130,65 @@
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/CommandHandler.java</url>
           <line>107</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangeDateCommand.java</url>
+          <line>35</line>
+          <properties class="edu.kit.kastel.ui.commands.ChangeDateCommand" method="executeProcastinotCommand">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

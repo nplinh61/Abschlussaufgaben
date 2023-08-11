@@ -1,12 +1,11 @@
 package edu.kit.kastel.ui;
 
 import edu.kit.kastel.model.Procastinot;
+import edu.kit.kastel.model.Task;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * A command used for handling {@link Procastinot} regarding interactions.
@@ -132,5 +131,28 @@ public abstract class ProcastinotCommand extends Command {
     public boolean isValidNumber (String str) {
         return str.matches(NUMBER_REGEX);
     }
+
+    public static Optional<LocalDate> tryParsingDate(String dateString) {
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(DATE_REGEX);
+        try {
+            LocalDate date = LocalDate.parse(dateString, dateFormatter);
+            return Optional.of(date);
+        } catch (IllegalArgumentException e) {
+            return Optional.empty();
+        }
+    }
+
+    public static Optional<Task.Priority> tryParsingPriority(String priorityString) {
+        try {
+            Task.Priority priority = parsePriority(priorityString);
+            return Optional.of(priority);
+        } catch (IllegalArgumentException e) {
+            return Optional.empty();
+        }
+    }
+
+    public static Task.Priority parsePriority(String input) {
+        return Task.Priority.valueOf(input.toUpperCase()); }
+
 }
 

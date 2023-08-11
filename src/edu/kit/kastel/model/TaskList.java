@@ -3,6 +3,12 @@ package edu.kit.kastel.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class to store all the task lists.
+ *
+ * @author ukgot
+ * @version 1.0
+ */
 public class TaskList {
     private String name;
     private List<Task> tasks;
@@ -19,7 +25,14 @@ public class TaskList {
     }
 
     public void addTask(Task task) {
+
         tasks.add(task);
+        task.setParentList(this);
+    }
+
+    public void removeTask(Task task) {
+        tasks.remove(task);
+        task.setParentList(null);
     }
 
     public boolean addTag(String tag) {
