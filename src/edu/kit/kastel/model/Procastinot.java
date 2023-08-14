@@ -83,5 +83,14 @@ public class Procastinot {
         }
     }
 
+    public List<Task> getTasksWithTag(String tag) {
+        List<Task> tasksWithTag = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.hasTag(tag)) {
+                tasksWithTag.add(task);
+            }
+        }
+        return tasksWithTag;
+    }
 
 }

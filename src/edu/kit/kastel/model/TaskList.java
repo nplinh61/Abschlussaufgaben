@@ -58,20 +58,11 @@ public class TaskList {
         }
     }
 
-    @Override
-    public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("List: ").append(name);
-
-        if (!tags.isEmpty()) {
-            stringBuilder.append(" (").append(String.join(", ", tags)).append(")");
-        }
-
-        for (Task task : tasks) {
-            stringBuilder.append("\n").append(task.toString().replace("\n", "\n  "));
-        }
-
-        return stringBuilder.toString();
+    public List<Task> getTasks() {
+        return tasks;
     }
 
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
+    }
 }

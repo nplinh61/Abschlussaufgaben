@@ -113,6 +113,10 @@ public class Task {
         return false;
     }
 
+    public boolean hasTag(String tag) {
+        return tags.contains(tag);
+    }
+
     public void addSubTask(Task subTask) {
 
         subTask.setParentTask(this);
