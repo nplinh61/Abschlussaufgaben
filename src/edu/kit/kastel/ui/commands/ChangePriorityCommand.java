@@ -2,6 +2,7 @@ package edu.kit.kastel.ui.commands;
 
 import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.model.Task;
+import edu.kit.kastel.model.Task.Priority;
 import edu.kit.kastel.ui.CommandHandler;
 import edu.kit.kastel.ui.ProcastinotCommand;
 import java.util.Optional;
@@ -40,7 +41,7 @@ public class ChangePriorityCommand extends ProcastinotCommand {
                 //TODO: print not found task message
 
             }
-            Optional<Task.Priority> newPriority = tryParsingPriority(changedPriority);
+            Optional<Priority> newPriority = tryParsingPriority(changedPriority);
             if (targetTask != null) {
                 if (newPriority.isPresent() && targetTask.getPriority() != null) {
                     System.out.printf(CHANGE_PRIORITY_SUCESS_MESSAGE, targetTask.getName(), newPriority.get());

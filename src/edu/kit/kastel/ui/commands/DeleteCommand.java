@@ -41,7 +41,7 @@ public class DeleteCommand extends ProcastinotCommand {
                 return;
             }
 
-            int numberOfSubTasks = targetTask.deleteOrRestoreTaskAndSubTasks(targetTask,deleted );
+            int numberOfSubTasks = targetTask.deleteOrRestoreTaskAndSubTasks(targetTask, deleted) - 1;
             System.out.printf(DELETE_SUCCESS_MESSAGE, targetTask.getName(), numberOfSubTasks);
 
         }

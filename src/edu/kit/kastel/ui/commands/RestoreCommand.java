@@ -41,7 +41,7 @@ public class RestoreCommand extends ProcastinotCommand {
                 System.out.printf(INVALID_TASK_ID_MESSAGE, taskId);
                 return;
             }
-            int numberOfSubTasks = targetTask.deleteOrRestoreTaskAndSubTasks(targetTask, deleted);
+            int numberOfSubTasks = targetTask.deleteOrRestoreTaskAndSubTasks(targetTask, deleted) - 1;
             System.out.printf(RESTORE_SUCCESS_MESSAGE, targetTask.getName(), numberOfSubTasks);
         }
 
