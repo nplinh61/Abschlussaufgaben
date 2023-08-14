@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update assign and toggle command">
+    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="delete and restore command">
       <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" afterDir="false" />
@@ -73,7 +73,7 @@
       <updated>1691077988592</updated>
       <workItem from="1691077989789" duration="4000" />
       <workItem from="1691601288575" duration="39681000" />
-      <workItem from="1691925964193" duration="11658000" />
+      <workItem from="1691925964193" duration="12084000" />
     </task>
     <task id="LOCAL-00001" summary="Add List Command">
       <created>1691674020430</created>
@@ -110,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691797648120</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="delete and restore command">
+      <created>1692012328008</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1692012328008</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +128,8 @@
     <MESSAGE value="tag command" />
     <MESSAGE value="update checkstyle : format and required javadoc" />
     <MESSAGE value="update assign and toggle command" />
-    <option name="LAST_COMMIT_MESSAGE" value="update assign and toggle command" />
+    <MESSAGE value="delete and restore command" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete and restore command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
