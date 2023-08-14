@@ -5,6 +5,8 @@ import edu.kit.kastel.model.Task;
 import edu.kit.kastel.ui.CommandHandler;
 import edu.kit.kastel.ui.ProcastinotCommand;
 
+
+
 /**
  * Command to show a task according to an id.
  *
@@ -32,8 +34,10 @@ public class ShowCommand extends ProcastinotCommand {
                 System.out.printf(TASK_NOT_FOUND_MESSAGE, taskId);
 
             } else {
-                targetTask.show(targetTask,0);
+                targetTask.showTaskAndSubtasks(targetTask, "");
             }
         }
     }
+
+
 }

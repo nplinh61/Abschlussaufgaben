@@ -1,6 +1,7 @@
 package edu.kit.kastel.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -20,6 +21,11 @@ public class Task {
     private final List<Task> subTasks;
     private Task parentTask;
     private TaskList parentList;
+    private Procastinot procastinot;
+    /**
+     * Pattern for the date format
+     */
+    private static final String DATE_PATTERN = "yyyy-MM-dd";
 
     public Task(String name) {
         this(name, Priority.NONE);
@@ -177,15 +183,21 @@ public class Task {
         }
     }
 
+
+    /*
     public void show(Task task, int level) {
         String indentation = "  ".repeat(level);
-        String priorityPresentation = task.getPriority() == null ? "" : " [" + task.getPriority() + "]";
-        String tagPresentation = task.getTags().isEmpty()  ? "" : ": ("
-                + String.join(", ", task.getTags()) + ")";
-        String statePresentation = task.isCompleted() ? "[x]" : "[ ]";
+        String priorityPresentation = getPriority() != Priority.NONE ? "[" + getPriority() + "]" : "";
+        String tagPresentation = getTags().isEmpty() ? "" : ": " + String.join(", ", getTags());
+        String statePresentation = isCompleted() ? "x" : " ";
+        String datePresentation = task.getDueDate() != null ? " --> " + task.getFormattedDueDate() : "";
 
-        System.out.println(indentation + statePresentation + " " + task.getName() + priorityPresentation
-                + (task.getTags().isEmpty() ? "" : tagPresentation) );
+        if (task.isCompleted()) {
+            return;
+        }
+
+        System.out.println(indentation + "- [" + statePresentation + "] " + task.getName() + " "
+                + priorityPresentation + tagPresentation + datePresentation);
 
         List<Task>  sortedSubTasks = new ArrayList<>(task.getSubTasks());
         sortedSubTasks.sort(Comparator.comparing(Task::getPriority, Comparator.nullsLast(Priority::compareTo))
@@ -195,5 +207,53 @@ public class Task {
             show(subTask, level+1);
         }
     }
+
+     */
+
+
+
+    public String formattedTaskPresentation() {
+
+        StringBuilder builder = new StringBuilder();
+        builder.append("- [").append(isCompleted() ? "x" : " ").append("] ").append(getName());
+
+        if (getPriority() != Priority.NONE) {
+            builder.append(" [").append(getPriority()).append("]");
+        }
+
+        if (!getTags().isEmpty()) {
+            builder.append(": ").append(String.join(", ", getTags()));
+        }
+
+        if (dueDate != null) {
+            builder.append(": --> ").append(getFormattedDueDate());
+        }
+
+        return builder.toString();
+    }
+    public void showTaskAndSubtasks(Task task, String indent) {
+        System.out.println(indent + task.formattedTaskPresentation());
+        List<Task> sortedSubTasks = new ArrayList<>(task.getSubTasks());
+        sortedSubTasks.sort(Comparator.comparing(Task::getPriority, Comparator.nullsLast(Priority::compareTo))
+                .thenComparing(Task::getId));
+
+        for (Task subTask : sortedSubTasks) {
+            showTaskAndSubtasks(subTask, indent + "  ");
+        }
+    }
+
+
+
+
+
+    private String getFormattedDueDate() {
+        if (dueDate == null) {
+            return "";
+
+        }
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_PATTERN);
+        return dueDate.format(formatter);
+    }
+
 
 }

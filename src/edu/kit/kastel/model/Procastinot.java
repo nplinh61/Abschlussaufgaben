@@ -1,13 +1,22 @@
 package edu.kit.kastel.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Procastinot {
     private int currentTaskId = 1;
     private int currentTaskList = 1;
     private List<Task> tasks = new ArrayList<>();
     private List<TaskList> lists = new ArrayList<>();
+
+    private Map<Integer, Task> parentList = new HashMap<>();
+
+    public Map<Integer, Task> getParentList() {
+        return parentList;
+    }
+
     public void increaseCurrentTaskId() {
         currentTaskId ++;
     }
@@ -32,14 +41,6 @@ public class Procastinot {
         return null;
     }
 
-    /*public int addList(TaskList taskList) {
-        int taskListId = getCurrentTaskList();
-        increaseCurrentTaskListId();
-        this.lists.add(taskList);
-        return taskListId;
-    }
-
-     */
 
     public void addList (TaskList taskList) {
         lists.add(taskList);
@@ -58,6 +59,28 @@ public class Procastinot {
             }
         }
         return null;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public List<Task> getIncompleteTasks() {
+        List<Task> incompleteTasks = new ArrayList<>();
+        for (Task task : getTasks()) {
+            addIncompleteTasks(task, incompleteTasks);
+        }
+        return incompleteTasks;
+    }
+
+    private void addIncompleteTasks(Task task, List<Task> incompleteTasks) {
+        if (!task.isCompleted()) {
+            incompleteTasks.add(task);
+        }
+
+        for (Task subTask : task.getSubTasks()) {
+            addIncompleteTasks(subTask, incompleteTasks);
+        }
     }
 
 

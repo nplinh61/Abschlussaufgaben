@@ -65,14 +65,16 @@ public class AssignCommand extends ProcastinotCommand {
             return;
         }
 
+        //TaskList existingParent = subTask.getParentList();
         if (subTask.getParentTask() != null) {
             Task previousParent = subTask.getParentTask();
             previousParent.removeSubTask(subTask);
-            return;
         }
 
         parentTask.addSubTask(subTask);
         subTask.setParentTask(parentTask);
+
+
         System.out.printf(ASSIGN_SUCCESS_MESSAGE, subTask.getName(), parentTask.getName());
 
     }
