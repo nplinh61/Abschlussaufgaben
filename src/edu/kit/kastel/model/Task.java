@@ -2,6 +2,7 @@ package edu.kit.kastel.model;
 
 import java.time.LocalDate;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -94,6 +95,10 @@ public class Task {
         this.deleted = deleted;
     }
 
+    public List<String> getTags() {
+        return tags;
+    }
+
     public boolean addTag(String tag) {
         if (!tags.contains(tag)) {
             tags.add(tag);
@@ -172,21 +177,23 @@ public class Task {
         }
     }
 
-    @Override
-    public String toString() {
-        String completionStatus = completed ? "[ x ]" : "[ ]";
-        String tagsString = tags.isEmpty() ? "" : " (" + String.join(", ", tags) + ")";
-        String dueDateArrow = dueDate != null ? " -> " + dueDate.toString() : "";
-        String priorityString = priority == Priority.NONE ? "" : priority.toString();
+    public void show(Task task, int level) {
+        String indentation = "  ".repeat(level);
+        String priorityPresentation = task.getPriority() == null ? "" : " [" + task.getPriority() + "]";
+        String tagPresentation = task.getTags().isEmpty()  ? "" : ": ("
+                + String.join(", ", task.getTags()) + ")";
+        String statePresentation = task.isCompleted() ? "[x]" : "[ ]";
 
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(completionStatus).append(" ").append(name).append(tagsString).append(dueDateArrow)
-                .append(" ").append(priorityString);
+        System.out.println(indentation + statePresentation + " " + task.getName() + priorityPresentation
+                + (task.getTags().isEmpty() ? "" : tagPresentation) );
 
-        for (Task subTask : subTasks) {
-            stringBuilder.append("\n").append(subTask.toString().replace("\n", "\n  "));
+        List<Task>  sortedSubTasks = new ArrayList<>(task.getSubTasks());
+        sortedSubTasks.sort(Comparator.comparing(Task::getPriority, Comparator.nullsLast(Priority::compareTo))
+                .thenComparing(Task::getId));
+
+        for (Task subTask : sortedSubTasks) {
+            show(subTask, level+1);
         }
-
-        return stringBuilder.toString();
     }
+
 }

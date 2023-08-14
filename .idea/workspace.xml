@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update checkstyle : format and required javadoc">
+    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update delete and restore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangePriorityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangePriorityCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/DeleteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/DeleteCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/RestoreCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/RestoreCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ShowCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692013029451</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update delete and restore">
+      <created>1692014866851</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692014866851</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,7 +111,8 @@
     <MESSAGE value="Add List Command" />
     <MESSAGE value="tag command" />
     <MESSAGE value="update checkstyle : format and required javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="update checkstyle : format and required javadoc" />
+    <MESSAGE value="update delete and restore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update delete and restore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
