@@ -5,7 +5,10 @@ import edu.kit.kastel.model.Task;
 import edu.kit.kastel.model.TaskList;
 import edu.kit.kastel.ui.CommandHandler;
 import edu.kit.kastel.ui.ProcastinotCommand;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Command to show all the tasks that belong to one required list.
@@ -48,9 +51,12 @@ public class ListCommand extends ProcastinotCommand {
             return;
         }
 
+        Set<Task> alreadyPrintedTasks = new HashSet<>();
+
         for (Task task : tasksOfList) {
-            if (task.getParentTask() == null) {
+            if (!alreadyPrintedTasks.contains(task)) {
                 task.showTaskAndSubtasks(task, "");
+                alreadyPrintedTasks.add(task);
             }
         }
 

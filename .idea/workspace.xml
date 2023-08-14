@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update todo">
+    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update TaggedWithCommand and ListCommand">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Procastinot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/TaskList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/FindCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/FindCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ListCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TaggedWithCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/TaggedWithCommand.java" afterDir="false" />
     </list>
@@ -117,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692040442118</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update TaggedWithCommand and ListCommand">
+      <created>1692042580734</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692042580734</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +137,8 @@
     <MESSAGE value="update delete and restore" />
     <MESSAGE value="update show" />
     <MESSAGE value="update todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="update todo" />
+    <MESSAGE value="update TaggedWithCommand and ListCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="update TaggedWithCommand and ListCommand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

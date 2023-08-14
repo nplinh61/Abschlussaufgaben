@@ -215,9 +215,7 @@ public class Task {
      */
 
 
-
     public String formattedTaskPresentation() {
-
         StringBuilder builder = new StringBuilder();
         builder.append("- [").append(isCompleted() ? "x" : " ").append("] ").append(getName());
 
@@ -225,16 +223,38 @@ public class Task {
             builder.append(" [").append(getPriority()).append("]");
         }
 
+        if (!getTags().isEmpty() || dueDate != null) {
+            builder.append(":");
+        }
+
         if (!getTags().isEmpty()) {
-            builder.append(": ").append(String.join(", ", getTags()));
+            builder.append(" (").append(String.join(", ", getTags())).append(")");
         }
 
         if (dueDate != null) {
-            builder.append(": --> ").append(getFormattedDueDate());
+            builder.append(" --> ").append(getFormattedDueDate());
         }
 
         return builder.toString();
     }
+
+
+
+    public List<Task> getSubTasksWithTag(String tag) {
+        List<Task> taggedSubTasks = new ArrayList<>();
+
+        for (Task subTask : subTasks) {
+            if (subTask.hasTag(tag)) {
+                taggedSubTasks.add(subTask);
+                taggedSubTasks.addAll(subTask.getSubTasksWithTag(tag));
+            }
+        }
+
+        return taggedSubTasks;
+    }
+
+
+
     public void showTaskAndSubtasks(Task task, String indent) {
         System.out.println(indent + task.formattedTaskPresentation());
         List<Task> sortedSubTasks = new ArrayList<>(task.getSubTasks());
@@ -246,6 +266,16 @@ public class Task {
         }
     }
 
+
+    public boolean hasParentTaskInList(List<Task> taskList) {
+        Task other = this;
+        while (true) {
+            Task parent = other.getParentTask();
+            if (parent == null) return false;
+            if (taskList.contains(parent)) return true;
+            other = parent;
+        }
+    }
 
 
 

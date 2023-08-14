@@ -33,7 +33,6 @@ public class TaggedWithCommand extends ProcastinotCommand {
     @Override
     protected void executeProcastinotCommand(String[] commandArguments) {
         String targetTag = commandArguments[0];
-
         List<Task> tasksWithTag = getProcastinot().getTasksWithTag(targetTag);
         
         if (tasksWithTag.isEmpty()) {
@@ -42,9 +41,9 @@ public class TaggedWithCommand extends ProcastinotCommand {
         }
 
         for (Task task : tasksWithTag) {
-            if (task.getParentTask() == null) {
-                task.showTaskAndSubtasks(task, "");
-            }
+            //if (task.getParentTask() == null) {
+            task.showTaskAndSubtasks(task, "");
+            //}
         }
     }
 }

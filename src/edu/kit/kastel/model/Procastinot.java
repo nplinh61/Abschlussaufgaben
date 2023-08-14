@@ -1,9 +1,11 @@
 package edu.kit.kastel.model;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Procastinot {
     private int currentTaskId = 1;
@@ -18,7 +20,7 @@ public class Procastinot {
     }
 
     public void increaseCurrentTaskId() {
-        currentTaskId ++;
+        currentTaskId++;
     }
     public void increaseCurrentTaskListId() {
         currentTaskList++;
@@ -42,7 +44,7 @@ public class Procastinot {
     }
 
 
-    public void addList (TaskList taskList) {
+    public void addList(TaskList taskList) {
         lists.add(taskList);
     }
     public int getCurrentTaskId() {
@@ -84,13 +86,60 @@ public class Procastinot {
     }
 
     public List<Task> getTasksWithTag(String tag) {
-        List<Task> tasksWithTag = new ArrayList<>();
+        List<Task> taggedTasks = new ArrayList<>();
+
         for (Task task : tasks) {
             if (task.hasTag(tag)) {
-                tasksWithTag.add(task);
+                taggedTasks.add(task);
+                taggedTasks.addAll(task.getSubTasksWithTag(tag));
             }
         }
-        return tasksWithTag;
+
+        return taggedTasks;
+    }
+    /*
+    public List<Task> getTasksWithName(Task task, String targetNamePart, Set<Task> visitedTasks) {
+        List<Task> matchingTasks = new ArrayList<>();
+
+        if (visitedTasks.contains(task)) {
+            return matchingTasks;
+        }
+
+        visitedTasks.add(task);
+
+        if (task.getName().contains(targetNamePart)) {
+            matchingTasks.add(task);
+        }
+
+        for (Task subTask : task.getSubTasks()) {
+            matchingTasks.addAll(getTasksWithName(subTask, targetNamePart, visitedTasks));
+        }
+
+        return matchingTasks;
+    }
+
+     */
+
+    public List<Task> getTasksWithName(Task task, String targetNamePart, Set<Task> visitedTasks) {
+        List<Task> matchingTasks = new ArrayList<>();
+
+        if (visitedTasks.contains(task)) {
+            return matchingTasks;
+        }
+
+        visitedTasks.add(task);
+
+        boolean taskMatches = task.getName().contains(targetNamePart);
+
+        if (taskMatches) {
+            matchingTasks.add(task);
+        }
+
+        for (Task subTask : task.getSubTasks()) {
+            matchingTasks.addAll(getTasksWithName(subTask, targetNamePart, visitedTasks));
+        }
+
+        return matchingTasks;
     }
 
 }
