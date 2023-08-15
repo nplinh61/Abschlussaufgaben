@@ -26,6 +26,9 @@ public class Task {
     private Task parentTask;
     private TaskList parentList;
     private Procastinot procastinot;
+
+    private Task originalParentTask;
+    private TaskList originalParentList;
     /**
      * Pattern for the date format
      */
@@ -192,36 +195,85 @@ public class Task {
         this.parentList = parentList;
     }
 
+    public TaskList getOriginalParentList() {
+        return originalParentList;
+    }
+
+    public void setOriginalParentList(TaskList originalParentList) {
+        this.originalParentList = originalParentList;
+    }
+
+    public Task getOriginalParentTask() {
+        return originalParentTask;
+    }
+
+    public void setOriginalParentTask(Task originalParentTask) {
+        this.originalParentTask = originalParentTask;
+    }
+
     public int deleteOrRestoreTaskAndSubTasks(Task task, boolean delete) {
         List<Task> subtasksModified = new ArrayList<>();
         collectSubTasks(task, subtasksModified);
         int numberOfSubTasks = 0;
+
+        if (!delete) {
+            task.setOriginalParentTask(task.getParentTask());
+            task.setOriginalParentList(task.getParentList());
+        }
+
         for (Task subtask : subtasksModified) {
             numberOfSubTasks++;
             subtask.setDeleted(delete);
         }
-        if (task.getParentTask() != null) {
-            if (delete) {
 
+        if (!delete && isRestored()) {
+            if (task.getOriginalParentTask() != null) {
+                task.getOriginalParentTask().addSubTask(task);
+            }
+            if (task.getOriginalParentList() != null) {
+                task.getOriginalParentList().addTask(task);
+            }
+            task.setRestored(true);
+        }
+
+        if (delete) {
+            if (task.getParentTask() != null) {
                 task.getParentTask().removeSubTask(task);
-            } else {
-                task.setRestored(true);
-                task.getParentTask().addSubTask(task);
+            }
+            if (task.getParentList() != null) {
+                task.getParentList().removeTask(task);
             }
         }
+        /*
+        if (task.getParentTask() != null) {
+            if (delete) {
+                task.getParentTask().removeSubTask(task);
+
+            } else {
+                task.setRestored(true);
+                task.getOriginalParentTask().addSubTask(task);
+                //task.getParentTask().addSubTask(task);
+                //task.setOriginalParentTask(originalParent);
+            }
+        }
+
         if (task.getParentList() != null) {
             if (delete) {
                 task.getParentList().removeTask(task);
             } else {
                 task.setRestored(true);
-                task.getParentList().addTask(task);
+                task.getOriginalParentList().addTask(task);
+                //task.getParentList().addTask(task);
+                //task.setOriginalParentList(originalParentList);
             }
         }
+
+         */
         task.setDeleted(delete);
         return numberOfSubTasks;
     }
 
-    private void collectSubTasks (Task task, List<Task> subtasks) {
+    private void collectSubTasks(Task task, List<Task> subtasks) {
         subtasks.add(task);
         for (Task subtask : task.getSubTasks()) {
             collectSubTasks(subtask, subtasks);

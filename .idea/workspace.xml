@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update TaggedWithCommand and ListCommand">
-      <change afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Priority.java" afterDir="false" />
+    <list default="true" id="a5d47fce-66b1-443e-8bea-6db55a83701e" name="Changes" comment="update UpComingCommand">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/ProcastinotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/ProcastinotCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangePriorityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/ChangePriorityCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/UpComingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/kastel/ui/commands/UpComingCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692054263650</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update UpComingCommand">
+      <created>1692091562587</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692091562587</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +151,8 @@
     <MESSAGE value="update show" />
     <MESSAGE value="update todo" />
     <MESSAGE value="update TaggedWithCommand and ListCommand" />
-    <option name="LAST_COMMIT_MESSAGE" value="update TaggedWithCommand and ListCommand" />
+    <MESSAGE value="update UpComingCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="update UpComingCommand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -161,32 +164,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>337</line>
+          <line>390</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>338</line>
+          <line>391</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>339</line>
+          <line>392</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>340</line>
+          <line>393</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>332</line>
+          <line>385</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>333</line>
+          <line>386</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -206,8 +209,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>336</line>
-          <properties class="edu.kit.kastel.model.Task" method="upcomingTasksPresentation">
+          <line>389</line>
+          <properties class="edu.kit.kastel.model.Task">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -215,8 +218,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/edu/kit/kastel/model/Task.java</url>
-          <line>331</line>
-          <properties class="edu.kit.kastel.model.Task" method="isWithinDateRange">
+          <line>384</line>
+          <properties class="edu.kit.kastel.model.Task">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
