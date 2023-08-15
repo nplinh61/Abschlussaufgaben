@@ -2,7 +2,7 @@ package edu.kit.kastel.ui.commands;
 
 import edu.kit.kastel.model.Procastinot;
 import edu.kit.kastel.model.Task;
-import edu.kit.kastel.model.Task.Priority;
+import edu.kit.kastel.model.Priority;
 import edu.kit.kastel.ui.CommandHandler;
 import edu.kit.kastel.ui.ProcastinotCommand;
 import java.util.Optional;

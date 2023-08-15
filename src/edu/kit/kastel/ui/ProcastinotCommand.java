@@ -1,7 +1,7 @@
 package edu.kit.kastel.ui;
 
+import edu.kit.kastel.model.Priority;
 import edu.kit.kastel.model.Procastinot;
-import edu.kit.kastel.model.Task;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -142,17 +142,17 @@ public abstract class ProcastinotCommand extends Command {
         }
     }
 
-    public static Optional<Task.Priority> tryParsingPriority(String priorityString) {
+    public static Optional<Priority> tryParsingPriority(String priorityString) {
         try {
-            Task.Priority priority = parsePriority(priorityString);
+            Priority priority = parsePriority(priorityString);
             return Optional.of(priority);
         } catch (IllegalArgumentException e) {
             return Optional.empty();
         }
     }
 
-    public static Task.Priority parsePriority(String input) {
-        return Task.Priority.valueOf(input.toUpperCase()); }
+    public static Priority parsePriority(String input) {
+        return Priority.valueOf(input.toUpperCase()); }
 
 
 }
